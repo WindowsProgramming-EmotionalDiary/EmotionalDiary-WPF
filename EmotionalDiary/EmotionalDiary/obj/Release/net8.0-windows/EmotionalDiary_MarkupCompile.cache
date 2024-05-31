@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-F:\GitHub\EmotionalDiary-WPF\EmotionalDiary\EmotionalDiary\obj\Debug\net8.0-windows\
+F:\GitHub\EmotionalDiary-WPF\EmotionalDiary\EmotionalDiary\obj\Release\net8.0-windows\
 EmotionalDiary
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+TRACE;RELEASE;NET;NET8_0;NETCOREAPP
 F:\GitHub\EmotionalDiary-WPF\EmotionalDiary\EmotionalDiary\App.xaml
 2384812637
 
-52097157662
+51859443601
 1981451641563
 MainWindow.xaml;View\CommunityPage.xaml;
 
