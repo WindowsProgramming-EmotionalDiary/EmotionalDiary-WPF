@@ -8,7 +8,77 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="CommunityPage">
 
-    <Grid>
-        
+    <Grid Background="#F7EEDD">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" Height="300" Width="500">
+            <Grid Background="#FF9B50" Height="50" Width="500">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Label FontSize="20" FontWeight="Bold" Content="산책하기 좋은 날" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0"/>
+                <Image Source="../Image/행복.png" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40"/>
+                <Label Content="20XX.XX.XX" FontWeight="Bold" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,0"/>
+            </Grid>
+            <Label Background="White" Height="300" Width="500" Content="오늘 날씨가 너무 좋아서 낮에 산책을 했다" VerticalAlignment="Top"/>
+        </StackPanel>
+        <Grid Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center">
+            <Button Background="Transparent" BorderBrush="Transparent">
+                <Image Source="../Image/NoFillHeart.png"/>
+            </Button>
+        </Grid>
+        <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Margin="10">
+            <StackPanel Margin="10">
+                <Grid Background="#FF9B50" Height="30" Width="150">
+                    <Label FontSize="12" FontWeight="Bold" Content="약속 까먹었다" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0"/>
+                </Grid>
+                <Label Background="White" Height="40" Width="150" HorizontalContentAlignment="Center">
+                    <Image  Source="../Image/불안.png" />
+                </Label>
+            </StackPanel>
+            <StackPanel Margin="10">
+                <Grid Background="#FF9B50" Height="30" Width="150">
+                    <Label FontSize="12" FontWeight="Bold" Content="산책하기 좋은 날" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0"/>
+                </Grid>
+                <Label Background="White" Height="40" Width="150" HorizontalContentAlignment="Center">
+                    <Image  Source="../Image/행복.png" />
+                </Label>
+            </StackPanel>
+            <StackPanel Margin="10">
+                <Grid Background="#FF9B50" Height="30" Width="150">
+                    <Label FontSize="12" FontWeight="Bold" Content="평범한 하루" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0"/>
+                </Grid>
+                <Label Background="White" Height="40" Width="150" HorizontalContentAlignment="Center">
+                    <Image  Source="../Image/중립.png" />
+                </Label>
+            </StackPanel>
+            <StackPanel Margin="10">
+                <Grid Background="#FF9B50" Height="30" Width="150">
+                    <Label FontSize="12" FontWeight="Bold" Content="슬프다" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0"/>
+                </Grid>
+                <Label Background="White" Height="40" Width="150" HorizontalContentAlignment="Center">
+                    <Image  Source="../Image/슬픔.png" />
+                </Label>
+            </StackPanel>
+        </StackPanel>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Margin="10" Height="50" Width="50" Background="#E14D2A">
+                    <Image Width="30" Source="../Image/왼쪽.png"/>
+                </Button>
+                <Button Margin="10" Height="50" Width="50" Background="#E14D2A">
+                    <Image Width="40" Source="../Image/오른쪽.png"/>
+                </Button>
+            </StackPanel>
+        </Grid>
     </Grid>
+
 </Page>

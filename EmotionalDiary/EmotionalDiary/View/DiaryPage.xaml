@@ -1,0 +1,42 @@
+﻿<Page x:Class="EmotionalDiary.View.DiaryPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EmotionalDiary.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DiaryPage">
+
+    <Grid Background="#F7EEDD">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" Height="300" Width="450">
+            <Grid Background="#FF9B50" Height="50" Width="449">
+                <Label FontSize="20" FontWeight="Bold" Content="산책하기 좋은 날" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0"/>
+            </Grid>
+            <Label Background="White" Height="249" Width="448" Content="오늘 날씨가 너무 좋아서 낮에 산책을 했다"/>
+        </StackPanel>
+        <Label FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="0, 345, 0, 0">오늘의 감정을 사진과 글로 남겨보세요</Label>
+        <Grid Grid.Column="0" Grid.Row="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Margin="10" Height="50" Width="80" Background="#E14D2A">
+                    <Label FontSize="25" FontWeight="Bold">확인</Label>
+                </Button>
+                <Button Margin="10" Height="50" Width="80" Background="#E14D2A">
+                    <Label FontSize="25" FontWeight="Bold">확인</Label>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <StackPanel Grid.RowSpan="2" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Margin="10">
+            <Calendar Margin="0, 25, 0, 0" SelectionMode="SingleRange" DisplayMode="Month"/>
+        </StackPanel>
+    </Grid>
+
+</Page>
