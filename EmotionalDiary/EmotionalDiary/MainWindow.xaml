@@ -1,0 +1,54 @@
+﻿<Window x:Class="EmotionalDiary.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmotionalDiary"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1920">
+
+    <Window.Resources>
+        <Style TargetType="TabItem" x:Key="TabItemStyle">
+            <Setter Property="Width" Value="630"/>
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="Background" Value="#FAAD80"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TabItem">
+                        <Grid>
+                            <Border x:Name="Border" CornerRadius="10" Background="{TemplateBinding Background}" Padding="5" Margin="2">
+                                <ContentPresenter ContentSource="Header" HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.Foreground="{TemplateBinding Foreground}" />
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#E14D2A"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="False">
+                                <Setter TargetName="Border" Property="Background" Value="#FAAD80"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="#F7EEDD">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TabControl HorizontalAlignment="Center" Background="#F7EEDD" Grid.Row="0" SelectionChanged="TabControl_SelectionChanged">
+            <TabItem Header="메인" Style="{StaticResource TabItemStyle}" Tag="MainPage.xaml"></TabItem>
+            <TabItem Header="공동체" Style="{StaticResource TabItemStyle}" Tag="CommunityPage.xaml"></TabItem>
+            <TabItem Header="다이어리" Style="{StaticResource TabItemStyle}" Tag="DiaryPage.xaml"></TabItem>
+        </TabControl>
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

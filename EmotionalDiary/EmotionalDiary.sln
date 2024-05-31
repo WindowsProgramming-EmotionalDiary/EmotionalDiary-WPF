@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmotionalDiary", "EmotionalDiary\EmotionalDiary.csproj", "{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF94592A-D32C-4919-9877-73C492945376}
+	EndGlobalSection
+EndGlobal

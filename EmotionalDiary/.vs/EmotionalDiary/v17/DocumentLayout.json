@@ -1,0 +1,152 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\com\\source\\repos\\EmotionalDiary\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}|EmotionalDiary\\EmotionalDiary.csproj|c:\\users\\com\\source\\repos\\emotionaldiary\\emotionaldiary\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}|EmotionalDiary\\EmotionalDiary.csproj|solutionrelative:emotionaldiary\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}|EmotionalDiary\\EmotionalDiary.csproj|c:\\users\\com\\source\\repos\\emotionaldiary\\emotionaldiary\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}|EmotionalDiary\\EmotionalDiary.csproj|solutionrelative:emotionaldiary\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}|EmotionalDiary\\EmotionalDiary.csproj|c:\\users\\com\\source\\repos\\emotionaldiary\\emotionaldiary\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}|EmotionalDiary\\EmotionalDiary.csproj|solutionrelative:emotionaldiary\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}|EmotionalDiary\\EmotionalDiary.csproj|c:\\users\\com\\source\\repos\\emotionaldiary\\emotionaldiary\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}|EmotionalDiary\\EmotionalDiary.csproj|solutionrelative:emotionaldiary\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}|EmotionalDiary\\EmotionalDiary.csproj|c:\\users\\com\\source\\repos\\emotionaldiary\\emotionaldiary\\view\\communitypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}|EmotionalDiary\\EmotionalDiary.csproj|solutionrelative:emotionaldiary\\view\\communitypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}|EmotionalDiary\\EmotionalDiary.csproj|c:\\users\\com\\source\\repos\\emotionaldiary\\emotionaldiary\\view\\communitypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}|EmotionalDiary\\EmotionalDiary.csproj|solutionrelative:emotionaldiary\\view\\communitypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}|EmotionalDiary\\EmotionalDiary.csproj|c:\\users\\com\\source\\repos\\emotionaldiary\\emotionaldiary\\view\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}|EmotionalDiary\\EmotionalDiary.csproj|solutionrelative:emotionaldiary\\view\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}|EmotionalDiary\\EmotionalDiary.csproj|c:\\users\\com\\source\\repos\\emotionaldiary\\emotionaldiary\\view\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DF7F0AB-3454-427A-A49B-50D83ECFE8CA}|EmotionalDiary\\EmotionalDiary.csproj|solutionrelative:emotionaldiary\\view\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\com\\source\\repos\\EmotionalDiary\\EmotionalDiary\\App.xaml.cs",
+              "RelativeDocumentMoniker": "EmotionalDiary\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\com\\source\\repos\\EmotionalDiary\\EmotionalDiary\\App.xaml.cs",
+              "RelativeToolTip": "EmotionalDiary\\App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T02:03:56.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CommunityPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\com\\source\\repos\\EmotionalDiary\\EmotionalDiary\\View\\CommunityPage.xaml.cs",
+              "RelativeDocumentMoniker": "EmotionalDiary\\View\\CommunityPage.xaml.cs",
+              "ToolTip": "C:\\Users\\com\\source\\repos\\EmotionalDiary\\EmotionalDiary\\View\\CommunityPage.xaml.cs",
+              "RelativeToolTip": "EmotionalDiary\\View\\CommunityPage.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T02:01:08.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\com\\source\\repos\\EmotionalDiary\\EmotionalDiary\\View\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "EmotionalDiary\\View\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\com\\source\\repos\\EmotionalDiary\\EmotionalDiary\\View\\MainPage.xaml.cs",
+              "RelativeToolTip": "EmotionalDiary\\View\\MainPage.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T01:25:08.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\com\\source\\repos\\EmotionalDiary\\EmotionalDiary\\App.xaml",
+              "RelativeDocumentMoniker": "EmotionalDiary\\App.xaml",
+              "ToolTip": "C:\\Users\\com\\source\\repos\\EmotionalDiary\\EmotionalDiary\\App.xaml*",
+              "RelativeToolTip": "EmotionalDiary\\App.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-31T01:23:50.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\com\\source\\repos\\EmotionalDiary\\EmotionalDiary\\View\\MainPage.xaml",
+              "RelativeDocumentMoniker": "EmotionalDiary\\View\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\com\\source\\repos\\EmotionalDiary\\EmotionalDiary\\View\\MainPage.xaml*",
+              "RelativeToolTip": "EmotionalDiary\\View\\MainPage.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-31T01:07:32.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CommunityPage.xaml",
+              "DocumentMoniker": "C:\\Users\\com\\source\\repos\\EmotionalDiary\\EmotionalDiary\\View\\CommunityPage.xaml",
+              "RelativeDocumentMoniker": "EmotionalDiary\\View\\CommunityPage.xaml",
+              "ToolTip": "C:\\Users\\com\\source\\repos\\EmotionalDiary\\EmotionalDiary\\View\\CommunityPage.xaml",
+              "RelativeToolTip": "EmotionalDiary\\View\\CommunityPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-31T01:06:25.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\com\\source\\repos\\EmotionalDiary\\EmotionalDiary\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "EmotionalDiary\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\com\\source\\repos\\EmotionalDiary\\EmotionalDiary\\MainWindow.xaml*",
+              "RelativeToolTip": "EmotionalDiary\\MainWindow.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-31T00:59:25.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\com\\source\\repos\\EmotionalDiary\\EmotionalDiary\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EmotionalDiary\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\com\\source\\repos\\EmotionalDiary\\EmotionalDiary\\MainWindow.xaml.cs*",
+              "RelativeToolTip": "EmotionalDiary\\MainWindow.xaml.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T00:59:22.654Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
