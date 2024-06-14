@@ -11,6 +11,7 @@ namespace EmotionalDiary.View
     {
         private MySqlConnection conn;
         private int currentPageNumber = 1;
+        private const int PageSize = 4; // 한 페이지에 표시할 항목 수
 
         public CommunityPage()
         {
@@ -18,31 +19,24 @@ namespace EmotionalDiary.View
             conn = MainWindow.Conn;
 
             // 커뮤니티 내용 조회
-            LoadCommunityData(1);
+            LoadCommunityData(currentPageNumber);
         }
-
 
         private void LoadNextPage(object sender, RoutedEventArgs e)
         {
-            int nextPageNumber = currentPageNumber + 1;
+            int totalNum = GetTotalCommunityItems();
+            int totalPages = (int)Math.Ceiling(totalNum / (double)PageSize);
 
-            // 마지막 페이지인지 여부를 확인
-            if (IsLastPage(nextPageNumber))
+            if (currentPageNumber < totalPages)
             {
-                MessageBox.Show("마지막 페이지입니다.", "알림", MessageBoxButton.OK, MessageBoxImage.Information);
+                currentPageNumber++;
+                LoadCommunityData(currentPageNumber);
             }
             else
             {
-                LoadCommunityData(nextPageNumber);
-                currentPageNumber = nextPageNumber;
+                MessageBox.Show("마지막 페이지입니다.", "알림", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
-
-        private bool IsLastPage(int pageNumber)
-        {
-           
-        }
-
 
         private int GetTotalCommunityItems()
         {
@@ -70,29 +64,33 @@ namespace EmotionalDiary.View
             return totalItems;
         }
 
-
-
         private void LoadPreviousPage(object sender, RoutedEventArgs e)
         {
-
+            if (currentPageNumber > 1)
+            {
+                currentPageNumber--;
+                LoadCommunityData(currentPageNumber);
+            }
+            else
+            {
+                MessageBox.Show("첫 번째 페이지입니다.", "알림", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            // 커뮤니티 항목을 클릭했을 때의 동작을 정의
+            MessageBox.Show("커뮤니티 항목이 클릭되었습니다.", "알림", MessageBoxButton.OK, MessageBoxImage.Information);
         }
-
-
 
         private void LoadCommunityData(int pageNumber)
         {
-            int pageSize = 4; // 한 페이지에 표시할 항목 수
-            int offset = (pageNumber - 1) * pageSize; // 현재 페이지의 OFFSET 값
+            int offset = (pageNumber - 1) * PageSize;
 
             try
             {
                 conn.Open();
-                string query = $"SELECT d.title, d.content, d.emotion, c.date FROM community c JOIN diary d ON c.diary_pk = d.pk ORDER BY c.date DESC LIMIT {pageSize} OFFSET {offset}";
+                string query = $"SELECT d.title, d.content, d.emotion, c.date FROM community c JOIN diary d ON c.diary_pk = d.pk ORDER BY c.date DESC LIMIT {PageSize} OFFSET {offset}";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
 
@@ -165,6 +163,5 @@ namespace EmotionalDiary.View
                 }
             }
         }
-
     }
 }

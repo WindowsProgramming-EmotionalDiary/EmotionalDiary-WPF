@@ -59,7 +59,7 @@
                     </Button>
                 </Border>
                 <Border Background="#E14D2A" Width="80" Height="80" CornerRadius="20" Margin="0, 0, 10, 0">
-                    <Button Height="80" Width="80" Background="Transparent" Click="LoadPreviousPage" BorderBrush="Transparent">
+                    <Button Height="80" Width="80" Background="Transparent" Click="LoadNextPage" BorderBrush="Transparent">
                         <Label FontSize="50">▶</Label>
                     </Button>
                 </Border>
