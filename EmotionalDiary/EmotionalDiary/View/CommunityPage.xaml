@@ -17,7 +17,8 @@
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" Grid.Row="0" Height="500" Width="800">
+
+        <StackPanel x:Name="DetailPanel" Grid.Column="0" Grid.Row="0" Height="500" Width="800" Visibility="Collapsed">
             <Border Background="#FF9B50" Width="600" Height="80" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20, 20, 0, 0">
                 <Grid Background="Transparent" Height="80" Width="600">
                     <Grid.ColumnDefinitions>
@@ -25,32 +26,23 @@
                         <ColumnDefinition Width="1*"/>
                         <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
-                    <Label x:Name="TitleLabel" FontSize="30" FontWeight="Bold" Content="산책하기 좋은 날" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0"/>
-                    <Image x:Name="EmotionLabel" Source="../Image/행복.png" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="60"/>
-                    <Label x:Name="DateLabel" Content="20XX.XX.XX" FontSize="20" FontWeight="Bold" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Label x:Name="TitleLabel" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0"/>
+                    <Label x:Name="EmotionImage" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="60"/>
+                    <Label x:Name="DateLabel" FontSize="20" FontWeight="Bold" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 </Grid>
             </Border>
-            <TextBlock x:Name="ContentLabel" FontSize="40" Background="White" Height="433" Width="600" Text="오늘 날씨가 너무 좋아서 낮에 산책을 했다" TextWrapping="Wrap"/>
-
+            <TextBlock x:Name="ContentTextBlock" FontSize="40" Background="White" Height="433" Width="600" TextWrapping="Wrap"/>
         </StackPanel>
-        <Grid Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center">
-            <Button Background="Transparent" BorderBrush="Transparent">
-                <Image Source="../Image/NoFillHeart.png"/>
+
+        <Grid x:Name="heartGrid" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Visibility="Collapsed">
+            <Button Background="Transparent" BorderBrush="Transparent" Click="Heart_Click">
+                <Label x:Name="heartLabel" Content="♡" FontSize="60"/>
             </Button>
         </Grid>
-        <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Margin="10"  x:Name="CommunityStackPanel">
-            <Button Click="Button_Click" Background="Transparent" BorderBrush="Transparent">
-                <StackPanel Margin="10">
-                    <Grid Background="#FF9B50" Height="50" Width="200">
-                        <TextBlock FontSize="20" FontWeight="Bold" Text="약속 까먹었다" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0"/>
-                    </Grid>
-                    <Label Background="White" Height="50" Width="200" HorizontalContentAlignment="Center">
-                        <Image  Source="../Image/불안.png" />
-                    </Label>
-                </StackPanel>
-            </Button>
-
+        <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Margin="10" x:Name="CommunityStackPanel">
+            <!-- 동적으로 항목이 추가될 영역 -->
         </StackPanel>
+
         <Grid Grid.Column="1" Grid.Row="1">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Border Background="#E14D2A" Width="80" Height="80" CornerRadius="20" Margin="0, 0, 10, 0">
