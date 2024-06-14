@@ -1,36 +1,30 @@
-﻿using System.Text;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using MySqlConnector;
 
 namespace EmotionalDiary
 {
     public partial class MainWindow : Window
     {
+        public static MySqlConnection Conn { get; private set; }
+        public static int userPk;
+
         public MainWindow()
         {
             InitializeComponent();
-            // 초기 페이지 로드
-            MainFrame.Navigate(new Uri("MainPage.xaml", UriKind.Relative));
+            Conn = new MySqlConnection("Server=localhost;Uid=root;Database=database;port=3300;pwd=1234");
+            userPk = 1;
         }
 
-        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            if (e.Source is TabControl)
-            {
-                TabItem selectedTab = ((TabControl)e.Source).SelectedItem as TabItem;
-                if (selectedTab != null)
-                {
-                    string pageUri = selectedTab.Tag.ToString();
-                    MainFrame.Navigate(new Uri(pageUri, UriKind.Relative));
-                }
-            }
+            //로그인 검증 로직을 추가.
+
+            // 로그인 성공 시 MainWindow로 전환
+            View.Main main = new View.Main();
+            main.Show();
+            this.Close();
         }
     }
 }

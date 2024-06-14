@@ -5,50 +5,79 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EmotionalDiary"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920">
+        Title="MainWindow" Height="800" Width="1080" ResizeMode="NoResize">
 
-    <Window.Resources>
-        <Style TargetType="TabItem" x:Key="TabItemStyle">
-            <Setter Property="Width" Value="630"/>
-            <Setter Property="Height" Value="60"/>
-            <Setter Property="Background" Value="#FAAD80"/>
-            <Setter Property="FontSize" Value="30"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Foreground" Value="Black"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="TabItem">
-                        <Grid>
-                            <Border x:Name="Border" CornerRadius="10" Background="{TemplateBinding Background}" Padding="5" Margin="2">
-                                <ContentPresenter ContentSource="Header" HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.Foreground="{TemplateBinding Foreground}" />
+    <StackPanel Background="#F7EEDD">
+        <Border Width="1080" Height="100"  Background="#E14D2A" CornerRadius="20, 20, 0, 0">
+            <TextBlock FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center">감정 일기</TextBlock>
+        </Border>
+        <TextBlock FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 10 0 0">이름과 전화번호로 로그인 할 수 있어요!</TextBlock>
+        <TextBlock FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 10 0 0">전화번호는 "-"를 제외하고 입력해주세요.</TextBlock>
+        <StackPanel Margin="50">
+            <StackPanel Orientation="Horizontal" Height="450" Width="900">
+                <StackPanel Height="422" Margin="20">
+                    <Border Background="#FF9B50" Width="350" Height="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20, 10, 20, 0" CornerRadius="20, 20, 0, 0">
+                        <TextBlock FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center">로그인</TextBlock>
+                    </Border>
+                    <Grid Background="White" Width="350" Height="300">
+                        <StackPanel VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal"  Margin="10">
+                                <TextBlock FontSize="30" VerticalAlignment="Center"  Margin="10">이름 :</TextBlock>
+                                <TextBox x:Name="login_id" Width="223" Height="60" VerticalAlignment="Center" FontSize="50"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal"  Margin="10">
+                                <TextBlock FontSize="30" VerticalAlignment="Center" Margin="10">전화번호 :</TextBlock>
+                                <TextBox x:Name="login_passward" Width="172" Height="60" VerticalAlignment="Center" FontSize="50"/>
+                            </StackPanel>
+                            <Border Background="#E14D2A" Width="200" Height="60" CornerRadius="20" Margin="20">
+                                <Button Width="200" Height="60" Click="LoginButton_Click" Background="Transparent" Foreground="White" Padding="10" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    확인
+                                </Button>
                             </Border>
-                        </Grid>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsSelected" Value="True">
-                                <Setter TargetName="Border" Property="Background" Value="#E14D2A"/>
-                                <Setter Property="Foreground" Value="White"/>
-                            </Trigger>
-                            <Trigger Property="IsSelected" Value="False">
-                                <Setter TargetName="Border" Property="Background" Value="#FAAD80"/>
-                                <Setter Property="Foreground" Value="Black"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
 
-    <Grid Background="#F7EEDD">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <TabControl HorizontalAlignment="Center" Background="#F7EEDD" Grid.Row="0" SelectionChanged="TabControl_SelectionChanged">
-            <TabItem Header="메인" Style="{StaticResource TabItemStyle}" Tag="MainPage.xaml"></TabItem>
-            <TabItem Header="공동체" Style="{StaticResource TabItemStyle}" Tag="CommunityPage.xaml"></TabItem>
-            <TabItem Header="다이어리" Style="{StaticResource TabItemStyle}" Tag="DiaryPage.xaml"></TabItem>
-        </TabControl>
-        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
-    </Grid>
+                <StackPanel>
+                    <Border Background="#FF9B50" Width="350" Height="80" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20, 20, 0, 0"
+                    Margin="30, 10, 25, 0">
+                        <TextBlock FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center">회원가입</TextBlock>
+                    </Border>
+                    <Grid Background="White" Width="350" Height="323">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="5" Height="50">
+                                <TextBlock FontSize="30" VerticalAlignment="Center" Margin="10">이름 :</TextBlock>
+                                <TextBox x:Name="id" Width="235" Height="30" VerticalAlignment="Center" FontSize="50"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="5" Height="50">
+                                <TextBlock FontSize="30" VerticalAlignment="Center" Margin="10">성별 :</TextBlock>
+                                <TextBox x:Name="sex" Width="233" Height="30" VerticalAlignment="Center" FontSize="50"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="5" Height="50">
+                                <TextBlock FontSize="30" VerticalAlignment="Center" Margin="10">생년월일 :</TextBlock>
+                                <TextBox x:Name="birth" Width="173" Height="30" VerticalAlignment="Center" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="5" Height="50">
+                                <TextBlock FontSize="30" VerticalAlignment="Center" Margin="10">전화번호 :</TextBlock>
+                                <TextBox x:Name="tel" Width="171" Height="30" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="5" Height="50">
+                                <TextBlock FontSize="30" VerticalAlignment="Center" Margin="10">주소 :</TextBlock>
+                                <TextBox x:Name="address" Width="234" Height="30" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                                    <TextBox.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="0.031"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </TextBox.RenderTransform>
+                                </TextBox>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
 </Window>

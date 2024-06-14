@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\com\source\repos\EmotionalDiary\EmotionalDiary\obj\Debug\net8.0-windows\
+F:\GitHub\EmotionalDiary-WPF\EmotionalDiary\EmotionalDiary\obj\Debug\net8.0-windows\
 EmotionalDiary
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\com\source\repos\EmotionalDiary\EmotionalDiary\App.xaml
-3-1001634889
+F:\GitHub\EmotionalDiary-WPF\EmotionalDiary\EmotionalDiary\App.xaml
+5-1555267861
 
-8-1719643503
-1981451641563
-MainWindow.xaml;View\CommunityPage.xaml;View\DiaryPage.xaml;
+10-4315407
+200-1886674113
+MainWindow.xaml;View\CommunityPage.xaml;View\DiaryPage.xaml;View\Main.xaml;View\MainPage.xaml;
 
 True
 

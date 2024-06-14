@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "mXuiKQ+F2moJnoS3Rr5MIrGqYwOeXkb/s/X9MsnC8r5laoA6/7PoyZZ50kIsYNnh17e/aBdhcHjxf2QXxYH2EQ==",
+  "dgSpecHash": "mmk6ZBwxLp4in8034x04UvMYEwuxkUfjiti4My69qH0OZ2i528+1+0QWK+m3cFdkDZQjPIKC61EgwL5OmrqRjw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\com\\source\\repos\\EmotionalDiary\\EmotionalDiary\\EmotionalDiary.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "F:\\GitHub\\EmotionalDiary-WPF\\EmotionalDiary\\EmotionalDiary\\EmotionalDiary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\com\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\com\\.nuget\\packages\\mysqlconnector\\2.3.7\\mysqlconnector.2.3.7.nupkg.sha512"
+  ],
   "logs": []
 }

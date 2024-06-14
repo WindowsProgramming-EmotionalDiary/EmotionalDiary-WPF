@@ -5,38 +5,59 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:EmotionalDiary.View"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="650" d:DesignWidth="1080"
       Title="DiaryPage">
 
     <Grid Background="#F7EEDD">
         <Grid.RowDefinitions>
-            <RowDefinition Height="5*"/>
-            <RowDefinition/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" Grid.Row="0" Height="300" Width="450">
-            <Grid Background="#FF9B50" Height="50" Width="449">
-                <Label FontSize="20" FontWeight="Bold" Content="산책하기 좋은 날" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0"/>
-            </Grid>
-            <Label Background="White" Height="249" Width="448" Content="오늘 날씨가 너무 좋아서 낮에 산책을 했다"/>
+
+        <StackPanel Grid.Row="0" Width="620" HorizontalAlignment="Center" Margin="0,50,0,50">
+            <Border Background="#FF9B50" Width="620" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20, 20, 0, 0">
+                <TextBox Name="TitleTextBox" FontSize="40" FontWeight="Bold" Text="제목을 입력하세요" Background="Transparent" BorderThickness="0" VerticalAlignment="Center" Margin="10,0"/>
+            </Border>
+            <TextBox FontSize="30" Name="ContentTextBox" Background="White" Height="358" Text="내용을 입력하세요" TextWrapping="Wrap" AcceptsReturn="True" RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.263"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.69"/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
         </StackPanel>
-        <Label FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="0, 345, 0, 0">오늘의 감정을 사진과 글로 남겨보세요</Label>
-        <Grid Grid.Column="0" Grid.Row="1">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Margin="10" Height="50" Width="80" Background="#E14D2A">
-                    <Label FontSize="25" FontWeight="Bold">확인</Label>
-                </Button>
-                <Button Margin="10" Height="50" Width="80" Background="#E14D2A">
-                    <Label FontSize="25" FontWeight="Bold">확인</Label>
-                </Button>
+
+        <Grid Grid.Row="1" Grid.ColumnSpan="2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Border Background="#E14D2A" Width="200" Height="78" CornerRadius="20" Margin="30">
+                    <Button Height="80" Width="150" Background="#E14D2A" Click="OnConfirmClick" BorderBrush="Transparent">
+                        <Label FontSize="25" FontWeight="Bold">확인</Label>
+                    </Button>
+                </Border>
+                <Border Background="#E14D2A" Width="200" Height="78" CornerRadius="20" Margin="30">
+                    <Button Height="80" Width="150" Background="#E14D2A" BorderBrush="Transparent">
+                        <Label FontSize="25" FontWeight="Bold">촬영</Label>
+                    </Button>
+                </Border>
             </StackPanel>
         </Grid>
-        <StackPanel Grid.RowSpan="2" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Margin="10">
-            <Calendar Margin="0, 25, 0, 0" SelectionMode="SingleRange" DisplayMode="Month"/>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Margin="0, 50, 20, 0" Width="400">
+            <Border Background="#FF9B50" Width="400" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20, 20, 0, 0">
+                <TextBlock FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold">달력</TextBlock>
+            </Border>
+            <Calendar x:Name="DiaryCalendar" Height="173">
+                <Calendar.LayoutTransform>
+                    <ScaleTransform ScaleX="2.4" ScaleY="2.2"/>
+                </Calendar.LayoutTransform>
+            </Calendar>
         </StackPanel>
     </Grid>
-
 </Page>
