@@ -36,13 +36,13 @@
 
         <Grid Grid.Row="1" Grid.ColumnSpan="2">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Border Background="#E14D2A" Width="200" Height="78" CornerRadius="20" Margin="30">
+                <Border x:Name="check_btn" Background="#E14D2A" Width="200" Height="78" CornerRadius="20" Margin="30" Visibility="Collapsed">
                     <Button Height="80" Width="150" Background="#E14D2A" Click="OnConfirmClick" BorderBrush="Transparent">
                         <Label FontSize="25" FontWeight="Bold">확인</Label>
                     </Button>
                 </Border>
                 <Border Background="#E14D2A" Width="200" Height="78" CornerRadius="20" Margin="30">
-                    <Button Height="80" Width="150" Background="#E14D2A" BorderBrush="Transparent">
+                    <Button Height="80" Width="150" Background="#E14D2A" BorderBrush="Transparent" Click="CapturePhoto_Click">
                         <Label FontSize="25" FontWeight="Bold">촬영</Label>
                     </Button>
                 </Border>

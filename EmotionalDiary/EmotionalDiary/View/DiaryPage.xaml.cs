@@ -1,18 +1,116 @@
 ﻿using System;
+using System.IO;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using MySqlConnector;
+using OpenCvSharp;
+using Newtonsoft.Json.Linq;
 
 namespace EmotionalDiary.View
 {
     public partial class DiaryPage : Page
     {
         private MySqlConnection conn;
+        private string predictedEmotion; // 예측된 감정을 저장할 전역 변수 추가
 
         public DiaryPage()
         {
             InitializeComponent();
             conn = MainWindow.Conn;
+        }
+
+        private void CapturePhoto_Click(object sender, RoutedEventArgs e)
+        {
+            CapturePhotoAsync();
+        }
+
+        private async Task CapturePhotoAsync()
+        {
+            using (var capture = new OpenCvSharp.VideoCapture(0))
+            {
+                if (!capture.IsOpened())
+                {
+                    MessageBox.Show("카메라를 열 수 없습니다.", "오류", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+                using (var frame = new OpenCvSharp.Mat())
+                {
+                    capture.Read(frame);
+
+                    if (frame.Empty())
+                    {
+                        MessageBox.Show("카메라에서 이미지를 캡처할 수 없습니다.", "오류", MessageBoxButton.OK, MessageBoxImage.Error);
+                        return;
+                    }
+
+                    // 저장
+                    string directory = @"../Image";
+                    if (!Directory.Exists(directory))
+                    {
+                        Directory.CreateDirectory(directory);
+                    }
+
+                    string filePath = Path.Combine(directory, $"photo_{DateTime.Now:yyyyMMdd_HHmmss}.png");
+                    Cv2.ImWrite(filePath, frame);
+
+                    MessageBox.Show($"사진이 저장되었습니다: {filePath}", "정보", MessageBoxButton.OK, MessageBoxImage.Information);
+                    check_btn.Visibility = Visibility.Visible;
+
+                    // 이미지를 플라스크 서버로 전송하여 예측
+                    string predictedEmotion = await PredictEmotionAsync(filePath, ContentTextBox.Text); // 예측된 감정 저장
+                    if (predictedEmotion != null)
+                    {
+                        this.predictedEmotion = predictedEmotion; // 전역 변수에 예측된 감정 저장
+                        OnConfirmClick(this, new RoutedEventArgs()); // 예측된 감정을 전달하지 않고 호출
+                    }
+
+                }
+            }
+        }
+
+
+        private async Task<string> PredictEmotionAsync(string filePath, string text)
+        {
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    using (var form = new MultipartFormDataContent())
+                    {
+                        byte[] imageData = File.ReadAllBytes(filePath);
+                        var byteArrayContent = new ByteArrayContent(imageData);
+                        byteArrayContent.Headers.ContentType = MediaTypeHeaderValue.Parse("image/png");
+
+                        form.Add(byteArrayContent, "image", Path.GetFileName(filePath));
+                        form.Add(new StringContent(text), "sentence");
+
+                        var response = await client.PostAsync("http://pettopia.iptime.org:8001/predict", form);
+                        response.EnsureSuccessStatusCode();
+
+                        string responseBody = await response.Content.ReadAsStringAsync();
+                        var jsonResponse = JObject.Parse(responseBody);
+
+                        if (jsonResponse.ContainsKey("predicted_emotion"))
+                        {
+                            return jsonResponse["predicted_emotion"].ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("예측 실패: " + jsonResponse["error"], "오류", MessageBoxButton.OK, MessageBoxImage.Error);
+                            return null;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("예측 중 오류 발생: " + ex.Message, "오류", MessageBoxButton.OK, MessageBoxImage.Error);
+                return null;
+            }
         }
 
         private void OnConfirmClick(object sender, RoutedEventArgs e)
@@ -36,7 +134,7 @@ namespace EmotionalDiary.View
                 MySqlCommand cmd1 = new MySqlCommand(query1, conn);
                 cmd1.Parameters.AddWithValue("@Title", title);
                 cmd1.Parameters.AddWithValue("@Content", content);
-                cmd1.Parameters.AddWithValue("@Emotion", "불안");
+                cmd1.Parameters.AddWithValue("@Emotion", predictedEmotion); // 전역 변수로 접근
                 cmd1.Parameters.AddWithValue("@LikeCnt", 0);
                 cmd1.Parameters.AddWithValue("@UserId", MainWindow.userPk);
                 cmd1.ExecuteNonQuery();

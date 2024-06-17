@@ -68,59 +68,59 @@
 
     <StackPanel Background="#F7EEDD">
         <StackPanel Orientation="Horizontal">
-            <StackPanel Width="360" Height="740" Margin="0, 20, 0 , 0">
-                <Border Background="#FF9B50" Width="300" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20, 20, 0, 0">
+            <StackPanel Width="340" Height="740" Margin="0, 30, 0 , 0">
+                <Border Background="#FF9B50" Width="270" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20, 20, 0, 0">
                     <TextBlock FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center">오늘 할 일</TextBlock>
                 </Border>
-                <Border Background="White" Width="300" Height="300" CornerRadius="0, 0, 20, 20">
+                <Border Background="White" Width="270" Height="254" CornerRadius="0, 0, 20, 20">
                     <StackPanel>
-                        <StackPanel Orientation="Horizontal" Height="60">
+                        <StackPanel Orientation="Horizontal" Height="50">
                             <CheckBox Width="20" Height="20" Margin="10, 5 , 0, 0">
                                 <CheckBox.LayoutTransform>
-                                    <ScaleTransform ScaleX="2" ScaleY="2" />
+                                    <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
                                 </CheckBox.LayoutTransform>
                             </CheckBox>
-                            <TextBox Width="230" Height="40" FontSize="20" VerticalAlignment="Center"/>
+                            <TextBox x:Name="todo1" Width="220" Height="30" FontSize="18" VerticalAlignment="Center"/>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" Height="60">
+                        <StackPanel Orientation="Horizontal" Height="50">
                             <CheckBox Width="20" Height="20" Margin="10, 5 , 0, 0">
                                 <CheckBox.LayoutTransform>
-                                    <ScaleTransform ScaleX="2" ScaleY="2" />
+                                    <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
                                 </CheckBox.LayoutTransform>
                             </CheckBox>
-                            <TextBox Width="230" Height="40" FontSize="20" VerticalAlignment="Center"/>
+                            <TextBox x:Name="todo2" Width="220" Height="30" FontSize="18" VerticalAlignment="Center"/>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" Height="60">
+                        <StackPanel Orientation="Horizontal" Height="50">
                             <CheckBox Width="20" Height="20" Margin="10, 5 , 0, 0">
                                 <CheckBox.LayoutTransform>
-                                    <ScaleTransform ScaleX="2" ScaleY="2" />
+                                    <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
                                 </CheckBox.LayoutTransform>
                             </CheckBox>
-                            <TextBox Width="230" Height="40" FontSize="20" VerticalAlignment="Center"/>
+                            <TextBox x:Name="todo3" Width="220" Height="30" FontSize="18" VerticalAlignment="Center"/>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" Height="60">
+                        <StackPanel Orientation="Horizontal" Height="50">
                             <CheckBox Width="20" Height="20" Margin="10, 5 , 0, 0">
                                 <CheckBox.LayoutTransform>
-                                    <ScaleTransform ScaleX="2" ScaleY="2" />
+                                    <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
                                 </CheckBox.LayoutTransform>
                             </CheckBox>
-                            <TextBox Width="230" Height="40" FontSize="20" VerticalAlignment="Center"/>
+                            <TextBox x:Name="todo4" Width="220" Height="30" FontSize="18" VerticalAlignment="Center"/>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" Height="60">
+                        <StackPanel Orientation="Horizontal" Height="50">
                             <CheckBox Width="20" Height="20" Margin="10, 5 , 0, 0">
                                 <CheckBox.LayoutTransform>
-                                    <ScaleTransform ScaleX="2" ScaleY="2" />
+                                    <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
                                 </CheckBox.LayoutTransform>
                             </CheckBox>
-                            <TextBox Width="230" Height="40" FontSize="20" VerticalAlignment="Center"/>
+                            <TextBox x:Name="todo5" Width="220" Height="30" FontSize="18" VerticalAlignment="Center"/>
                         </StackPanel>
                     </StackPanel>
                 </Border>
-                <StackPanel Margin="5">
-                    <Border Background="#FF9B50" Width="300" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20, 20, 0, 0" Margin="0, 10 , 0, 0">
-                        <TextBlock FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center">내 정보</TextBlock>
+                <StackPanel Margin="5, 30, 5, 0">
+                    <Border Background="#FF9B50" Width="270" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20, 20, 0, 0" Margin="0, 10 , 0, 0">
+                        <TextBlock FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">내 정보</TextBlock>
                     </Border>
-                    <Border Background="White" Width="300" Height="195" CornerRadius="0, 0, 20, 20">
+                    <Border Background="White" Width="270" Height="195" CornerRadius="0, 0, 20, 20">
                         <StackPanel>
                             <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.5,0.5" Height="45" Margin="2">
                                 <StackPanel.RenderTransform>
@@ -131,20 +131,23 @@
                                         <TranslateTransform X="0.323"/>
                                     </TransformGroup>
                                 </StackPanel.RenderTransform>
-                                <TextBlock FontSize="30">이름 : </TextBlock>
-                                <TextBox Width="206" Height="30" FontSize="30"/>
+                                <StackPanel Orientation="Horizontal" Height="45" Margin="2">
+                                    <TextBlock FontSize="22" Margin="0, 5, 0, 0">이름 :</TextBlock>
+                                    <TextBlock x:Name="myName" FontSize="22" Margin="20, 5, 0, 0"></TextBlock>
+                                </StackPanel>
+
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Height="45" Margin="2">
-                                <TextBlock FontSize="30">나이 :</TextBlock>
-                                <TextBox Width="208" Height="30" FontSize="50"/>
+                                <TextBlock FontSize="22" Margin="0, 5, 0, 0">생년월일 :</TextBlock>
+                                <TextBlock x:Name="myAge" FontSize="22" Margin="20, 5, 0, 0"></TextBlock>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Height="45" Margin="2">
-                                <TextBlock FontSize="30">전화번호 :</TextBlock>
-                                <TextBox Width="150" Height="30" FontSize="50"/>
+                                <TextBlock FontSize="22" Margin="0, 5, 0, 0">전화번호 :</TextBlock>
+                                <TextBlock x:Name="myTel" FontSize="22" Margin="20, 5, 0, 0"></TextBlock>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Height="45" Margin="2">
-                                <TextBlock FontSize="30">주소 :</TextBlock>
-                                <TextBox Width="206" Height="30" FontSize="50"/>
+                                <TextBlock FontSize="22" Margin="0, 5, 0, 0">주소 :</TextBlock>
+                                <TextBlock x:Name="myAddress" FontSize="22" Margin="20, 5, 0, 0"></TextBlock>
                             </StackPanel>
                         </StackPanel>
                     </Border>
@@ -152,33 +155,39 @@
             </StackPanel>
 
 
-            <StackPanel Margin="0, 20, 0, 0" Width="450">
-                <Border Background="#FF9B50" Width="450" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20, 20, 0, 0">
+            <StackPanel Margin="0, 150, 0, 0" Width="400">
+                <Border Background="#FF9B50" Width="357" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20, 20, 0, 0">
                     <TextBlock FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold">달력</TextBlock>
                 </Border>
-                <Calendar Height="173">
+                <Calendar Height="173" Margin="0, -6, 0 ,0">
                     <Calendar.LayoutTransform>
-                        <ScaleTransform ScaleX="3" ScaleY="3.3"/>
+                        <ScaleTransform ScaleX="2" ScaleY="2"/>
                     </Calendar.LayoutTransform>
                 </Calendar>
             </StackPanel>
-            <StackPanel Width="250">
-                <TextBlock FontFamily="Segoe UI Emoji" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
-                    😁 기쁨
+            <StackPanel Width="314">
+                <TextBlock FontFamily="Segoe UI Emoji" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10, 15">
+                    😲 놀람
                 </TextBlock>
-                <TextBlock FontFamily="Segoe UI Emoji" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
-                    🙂 행복
-                </TextBlock>
-                <TextBlock FontFamily="Segoe UI Emoji" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
-                    😐 중립
-                </TextBlock>
-                <TextBlock FontFamily="Segoe UI Emoji" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
-                    🙁 우울
-                </TextBlock>
-                <TextBlock FontFamily="Segoe UI Emoji" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                <TextBlock FontFamily="Segoe UI Emoji" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10, 15">
                     😠 분노
                 </TextBlock>
-                <Border Background="#E14D2A" Width="200" Height="78" CornerRadius="20" Margin="0, 200, 0, 0">
+                <TextBlock FontFamily="Segoe UI Emoji" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10, 15">
+                    😨 불안
+                </TextBlock>
+                <TextBlock FontFamily="Segoe UI Emoji" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10, 15">
+                    🙁 상처
+                </TextBlock>
+                <TextBlock FontFamily="Segoe UI Emoji" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10, 15">
+                    😪 슬픔
+                </TextBlock>
+                <TextBlock FontFamily="Segoe UI Emoji" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10, 15">
+                    😐 중립
+                </TextBlock>
+                <TextBlock FontFamily="Segoe UI Emoji" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10, 15">
+                    😁 행복
+                </TextBlock>
+                <Border Background="#E14D2A" Width="200" Height="78" CornerRadius="20" Margin="0, 30, 0, 0" MouseLeftButtonUp="Border_MouseLeftButtonUp">
                     <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30">치매예방게임</TextBlock>
                 </Border>
             </StackPanel>

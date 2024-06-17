@@ -1,11 +1,29 @@
 {
   "version": 2,
-  "dgSpecHash": "mmk6ZBwxLp4in8034x04UvMYEwuxkUfjiti4My69qH0OZ2i528+1+0QWK+m3cFdkDZQjPIKC61EgwL5OmrqRjw==",
+  "dgSpecHash": "jA+/VBd52HAG9Cz8TA+yHsh30rkaMcyf0DR2+2uMxfkR8XIuwHJ/Unc/ffD3ZLepHtSyZQjq5n1/anopvxoiGA==",
   "success": true,
   "projectFilePath": "F:\\GitHub\\EmotionalDiary-WPF\\EmotionalDiary\\EmotionalDiary\\EmotionalDiary.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\com\\.nuget\\packages\\fody\\6.7.0\\fody.6.7.0.nupkg.sha512",
+    "C:\\Users\\com\\.nuget\\packages\\google.protobuf\\3.21.12\\google.protobuf.3.21.12.nupkg.sha512",
+    "C:\\Users\\com\\.nuget\\packages\\methodboundaryaspect.fody\\2.0.149\\methodboundaryaspect.fody.2.0.149.nupkg.sha512",
     "C:\\Users\\com\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
-    "C:\\Users\\com\\.nuget\\packages\\mysqlconnector\\2.3.7\\mysqlconnector.2.3.7.nupkg.sha512"
+    "C:\\Users\\com\\.nuget\\packages\\mysqlconnector\\2.3.7\\mysqlconnector.2.3.7.nupkg.sha512",
+    "C:\\Users\\com\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\com\\.nuget\\packages\\oneof\\3.0.263\\oneof.3.0.263.nupkg.sha512",
+    "C:\\Users\\com\\.nuget\\packages\\opencvsharp4\\4.9.0.20240103\\opencvsharp4.4.9.0.20240103.nupkg.sha512",
+    "C:\\Users\\com\\.nuget\\packages\\protobuf.text\\0.7.2\\protobuf.text.0.7.2.nupkg.sha512",
+    "C:\\Users\\com\\.nuget\\packages\\razorvine.pickle\\1.4.0\\razorvine.pickle.1.4.0.nupkg.sha512",
+    "C:\\Users\\com\\.nuget\\packages\\serilog\\2.10.0\\serilog.2.10.0.nupkg.sha512",
+    "C:\\Users\\com\\.nuget\\packages\\serilog.sinks.console\\4.1.0\\serilog.sinks.console.4.1.0.nupkg.sha512",
+    "C:\\Users\\com\\.nuget\\packages\\sharpziplib\\1.4.0\\sharpziplib.1.4.0.nupkg.sha512",
+    "C:\\Users\\com\\.nuget\\packages\\skiasharp\\2.88.6\\skiasharp.2.88.6.nupkg.sha512",
+    "C:\\Users\\com\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.6\\skiasharp.nativeassets.macos.2.88.6.nupkg.sha512",
+    "C:\\Users\\com\\.nuget\\packages\\skiasharp.nativeassets.win32\\2.88.6\\skiasharp.nativeassets.win32.2.88.6.nupkg.sha512",
+    "C:\\Users\\com\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\com\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\com\\.nuget\\packages\\tensorflow.net\\0.150.0\\tensorflow.net.0.150.0.nupkg.sha512",
+    "C:\\Users\\com\\.nuget\\packages\\torchsharp\\0.102.5\\torchsharp.0.102.5.nupkg.sha512"
   ],
   "logs": []
 }

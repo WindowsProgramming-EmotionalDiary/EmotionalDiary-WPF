@@ -31,3 +31,4 @@ F:\GitHub\EmotionalDiary-WPF\EmotionalDiary\EmotionalDiary\obj\Debug\net8.0-wind
 F:\GitHub\EmotionalDiary-WPF\EmotionalDiary\EmotionalDiary\obj\Debug\net8.0-windows\ref\EmotionalDiary.dll
 F:\GitHub\EmotionalDiary-WPF\EmotionalDiary\EmotionalDiary\obj\Debug\net8.0-windows\View\Main.g.cs
 F:\GitHub\EmotionalDiary-WPF\EmotionalDiary\EmotionalDiary\obj\Debug\net8.0-windows\View\Main.baml
+F:\GitHub\EmotionalDiary-WPF\EmotionalDiary\EmotionalDiary\bin\Debug\net8.0-windows\OpenCvSharp.dll

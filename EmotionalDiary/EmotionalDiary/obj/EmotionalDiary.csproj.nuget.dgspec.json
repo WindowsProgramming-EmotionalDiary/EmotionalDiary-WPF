@@ -52,6 +52,18 @@
             "MySqlConnector": {
               "target": "Package",
               "version": "[2.3.7, )"
+            },
+            "OpenCvSharp4": {
+              "target": "Package",
+              "version": "[4.9.0.20240103, )"
+            },
+            "TensorFlow.NET": {
+              "target": "Package",
+              "version": "[0.150.0, )"
+            },
+            "TorchSharp": {
+              "target": "Package",
+              "version": "[0.102.5, )"
             }
           },
           "imports": [

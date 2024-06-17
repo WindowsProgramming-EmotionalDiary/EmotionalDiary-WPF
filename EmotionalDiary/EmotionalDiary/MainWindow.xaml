@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EmotionalDiary"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1080" ResizeMode="NoResize">
+        Title="MainWindow" Height="800" Width="1080" ResizeMode="NoResize"
+        >
 
     <StackPanel Background="#F7EEDD">
-        <Border Width="1080" Height="100"  Background="#E14D2A" CornerRadius="20, 20, 0, 0">
+        <Border Width="1067" Height="100"  Background="#E14D2A" CornerRadius="20, 20, 0, 0">
             <TextBlock FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center">감정 일기</TextBlock>
         </Border>
         <TextBlock FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 10 0 0">이름과 전화번호로 로그인 할 수 있어요!</TextBlock>
@@ -17,20 +18,20 @@
             <StackPanel Orientation="Horizontal" Height="450" Width="900">
                 <StackPanel Height="422" Margin="20">
                     <Border Background="#FF9B50" Width="350" Height="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20, 10, 20, 0" CornerRadius="20, 20, 0, 0">
-                        <TextBlock FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center">로그인</TextBlock>
+                        <TextBlock FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">로그인</TextBlock>
                     </Border>
                     <Grid Background="White" Width="350" Height="300">
                         <StackPanel VerticalAlignment="Center">
-                            <StackPanel Orientation="Horizontal"  Margin="10">
-                                <TextBlock FontSize="30" VerticalAlignment="Center"  Margin="10">이름 :</TextBlock>
-                                <TextBox x:Name="login_id" Width="223" Height="60" VerticalAlignment="Center" FontSize="50"/>
+                            <StackPanel Orientation="Horizontal"  Margin="10, 40, 0, 0">
+                                <TextBlock FontSize="22" VerticalAlignment="Center"  Margin="31, 10, 31, 10">이름 :</TextBlock>
+                                <TextBox x:Name="login_id" Width="210" Height="40" VerticalAlignment="Center" FontSize="22" />
                             </StackPanel>
                             <StackPanel Orientation="Horizontal"  Margin="10">
-                                <TextBlock FontSize="30" VerticalAlignment="Center" Margin="10">전화번호 :</TextBlock>
-                                <TextBox x:Name="login_passward" Width="172" Height="60" VerticalAlignment="Center" FontSize="50"/>
+                                <TextBlock FontSize="22" VerticalAlignment="Center" Margin="10">전화번호 :</TextBlock>
+                                <TextBox x:Name="login_passward" Width="209" Height="40" VerticalAlignment="Center" FontSize="22" Margin="0, 30, 0, 20"/>
                             </StackPanel>
-                            <Border Background="#E14D2A" Width="200" Height="60" CornerRadius="20" Margin="20">
-                                <Button Width="200" Height="60" Click="LoginButton_Click" Background="Transparent" Foreground="White" Padding="10" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Border Background="#E14D2A" Width="200" Height="60" CornerRadius="10" Margin="20">
+                                <Button Width="200" Height="60" Click="LoginButton_Click" Background="Transparent" Foreground="White" Padding="10" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30">
                                     확인
                                 </Button>
                             </Border>
@@ -40,30 +41,30 @@
 
                 <StackPanel>
                     <Border Background="#FF9B50" Width="350" Height="80" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20, 20, 0, 0"
-                    Margin="30, 10, 25, 0">
-                        <TextBlock FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center">회원가입</TextBlock>
+                    Margin="25, 10, 25, 0">
+                        <TextBlock FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">회원가입</TextBlock>
                     </Border>
-                    <Grid Background="White" Width="350" Height="323">
+                    <Grid Background="White" Width="350" Height="367">
                         <StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="5" Height="50">
-                                <TextBlock FontSize="30" VerticalAlignment="Center" Margin="10">이름 :</TextBlock>
-                                <TextBox x:Name="id" Width="235" Height="30" VerticalAlignment="Center" FontSize="50"/>
+                                <TextBlock FontSize="22" VerticalAlignment="Center" Margin="10">이름 :</TextBlock>
+                                <TextBox x:Name="id" Width="254" Height="30" VerticalAlignment="Center" FontSize="22"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="5" Height="50">
-                                <TextBlock FontSize="30" VerticalAlignment="Center" Margin="10">성별 :</TextBlock>
-                                <TextBox x:Name="sex" Width="233" Height="30" VerticalAlignment="Center" FontSize="50"/>
+                                <TextBlock FontSize="22" VerticalAlignment="Center" Margin="10">성별 :</TextBlock>
+                                <TextBox x:Name="sex" Width="255" Height="30" VerticalAlignment="Center" FontSize="22"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="5" Height="50">
-                                <TextBlock FontSize="30" VerticalAlignment="Center" Margin="10">생년월일 :</TextBlock>
-                                <TextBox x:Name="birth" Width="173" Height="30" VerticalAlignment="Center" />
+                                <TextBlock FontSize="22" VerticalAlignment="Center" Margin="10">생년월일 :</TextBlock>
+                                <TextBox x:Name="birth" Width="211" Height="30" VerticalAlignment="Center" FontSize="22"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="5" Height="50">
-                                <TextBlock FontSize="30" VerticalAlignment="Center" Margin="10">전화번호 :</TextBlock>
-                                <TextBox x:Name="tel" Width="171" Height="30" VerticalAlignment="Center"/>
+                                <TextBlock FontSize="22" VerticalAlignment="Center" Margin="10">전화번호 :</TextBlock>
+                                <TextBox x:Name="tel" Width="212" Height="30" VerticalAlignment="Center" FontSize="22"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="5" Height="50">
-                                <TextBlock FontSize="30" VerticalAlignment="Center" Margin="10">주소 :</TextBlock>
-                                <TextBox x:Name="address" Width="234" Height="30" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                                <TextBlock FontSize="22" VerticalAlignment="Center" Margin="10">주소 :</TextBlock>
+                                <TextBox x:Name="address" Width="256" Height="30" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontSize="22">
                                     <TextBox.RenderTransform>
                                         <TransformGroup>
                                             <ScaleTransform/>
@@ -73,6 +74,13 @@
                                         </TransformGroup>
                                     </TextBox.RenderTransform>
                                 </TextBox>
+                            </StackPanel>
+                            <StackPanel>
+                                <Border Background="#E14D2A" Width="153" Height="50" CornerRadius="10" Margin="0">
+                                    <Button Width="154" Height="50" Click="JoinButton_Click" Background="Transparent" Foreground="White" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">
+                                        확인
+                                    </Button>
+                                </Border>
                             </StackPanel>
                         </StackPanel>
                     </Grid>
