@@ -14,7 +14,7 @@ namespace EmotionalDiary.View
     public partial class DiaryPage : Page
     {
         private MySqlConnection conn;
-        private string predictedEmotion; // 예측된 감정을 저장할 전역 변수 추가
+        public static string emotion; 
 
         public DiaryPage()
         {
@@ -64,8 +64,8 @@ namespace EmotionalDiary.View
                     string predictedEmotion = await PredictEmotionAsync(filePath, ContentTextBox.Text); // 예측된 감정 저장
                     if (predictedEmotion != null)
                     {
-                        this.predictedEmotion = predictedEmotion; // 전역 변수에 예측된 감정 저장
-                        OnConfirmClick(this, new RoutedEventArgs()); // 예측된 감정을 전달하지 않고 호출
+                        emotion = predictedEmotion;
+                        OnConfirmClick(emotion, new RoutedEventArgs()); // 예측된 감정을 전달하지 않고 호출
                     }
 
                 }
@@ -88,7 +88,7 @@ namespace EmotionalDiary.View
                         form.Add(byteArrayContent, "image", Path.GetFileName(filePath));
                         form.Add(new StringContent(text), "sentence");
 
-                        var response = await client.PostAsync("http://pettopia.iptime.org:8001/predict", form);
+                        var response = await client.PostAsync("http://pettopia.iptime.org/predict", form);
                         response.EnsureSuccessStatusCode();
 
                         string responseBody = await response.Content.ReadAsStringAsync();
@@ -113,6 +113,11 @@ namespace EmotionalDiary.View
             }
         }
 
+        private void clear_btn(object sender, RoutedEventArgs e)
+        {
+            clearBtn.Visibility = Visibility.Collapsed;
+        }
+
         private void OnConfirmClick(object sender, RoutedEventArgs e)
         {
             string title = TitleTextBox.Text;
@@ -134,9 +139,9 @@ namespace EmotionalDiary.View
                 MySqlCommand cmd1 = new MySqlCommand(query1, conn);
                 cmd1.Parameters.AddWithValue("@Title", title);
                 cmd1.Parameters.AddWithValue("@Content", content);
-                cmd1.Parameters.AddWithValue("@Emotion", predictedEmotion); // 전역 변수로 접근
+                cmd1.Parameters.AddWithValue("@Emotion", emotion);
                 cmd1.Parameters.AddWithValue("@LikeCnt", 0);
-                cmd1.Parameters.AddWithValue("@UserId", MainWindow.userPk);
+                cmd1.Parameters.AddWithValue("@UserId", View.MainPage.user_pk);
                 cmd1.ExecuteNonQuery();
                 long diaryPk = cmd1.LastInsertedId; // 삽입된 다이어리의 pk 가져오기
                 conn.Close();
@@ -163,6 +168,11 @@ namespace EmotionalDiary.View
                     conn.Close();
                 }
             }
+        }
+
+        private void clearBtn1_Click(object sender, RoutedEventArgs e)
+        {
+            clearBtn1.Visibility = Visibility.Collapsed;
         }
     }
 }

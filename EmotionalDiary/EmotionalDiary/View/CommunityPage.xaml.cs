@@ -266,7 +266,7 @@ namespace EmotionalDiary.View
                     return "😠";
                 case "불안":
                     return "😨";
-                case "상처":
+                case "혐오": //감정일기로는 상처
                     return "🙁";
                 case "슬픔":
                     return "😪";

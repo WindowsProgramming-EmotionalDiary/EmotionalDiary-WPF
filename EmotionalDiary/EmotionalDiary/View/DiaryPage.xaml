@@ -20,9 +20,14 @@
 
         <StackPanel Grid.Row="0" Width="620" HorizontalAlignment="Center" Margin="0,50,0,50">
             <Border Background="#FF9B50" Width="620" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20, 20, 0, 0">
-                <TextBox Name="TitleTextBox" FontSize="40" FontWeight="Bold" Text="제목을 입력하세요" Background="Transparent" BorderThickness="0" VerticalAlignment="Center" Margin="10,0"/>
+                <StackPanel>
+                    <Button x:Name="clearBtn" Click="clear_btn" Content="제목을 입력하세요" BorderBrush="Transparent" Background="Transparent" Margin="0, 0, 0, -50" FontSize="30" FontWeight="Bold" Panel.ZIndex="2"/>
+                    <TextBox  Name="TitleTextBox" FontSize="40" FontWeight="Bold" Text="" Background="Transparent" BorderThickness="0" VerticalAlignment="Center" Margin="10,0"/>
+                </StackPanel>
+                
             </Border>
-            <TextBox FontSize="30" Name="ContentTextBox" Background="White" Height="358" Text="내용을 입력하세요" TextWrapping="Wrap" AcceptsReturn="True" RenderTransformOrigin="0.5,0.5">
+            <Button x:Name="clearBtn1" Click="clearBtn1_Click" Content="내용을 입력하세요" BorderBrush="Transparent" Background="Transparent" Margin="0, 0, 0, -350" FontSize="30" FontWeight="Bold" Panel.ZIndex="2" Height="336"/>
+            <TextBox FontSize="30" Name="ContentTextBox" Background="White" Height="358" Text="" TextWrapping="Wrap" AcceptsReturn="True" RenderTransformOrigin="0.5,0.5">
                 <TextBox.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>

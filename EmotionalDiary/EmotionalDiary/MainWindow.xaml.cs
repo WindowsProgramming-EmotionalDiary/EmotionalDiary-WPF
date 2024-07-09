@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Net;
 using System.Windows;
 using System.Windows.Controls;
+using EmotionalDiary.View;
 using MySqlConnector;
 
 namespace EmotionalDiary
@@ -15,7 +17,7 @@ namespace EmotionalDiary
         {
             InitializeComponent();
             Conn = new MySqlConnection("Server=localhost;Uid=root;Database=database;port=3300;pwd=1234");
-            userPk = 1;
+            userPk = -1;
         }
 
         private void JoinButton_Click(object sender, RoutedEventArgs e)
@@ -112,7 +114,6 @@ namespace EmotionalDiary
                 if (reader.HasRows)
                 {
                     // 로그인 성공
-                    MessageBox.Show("로그인 성공!");
                     password = login_passward.Text;
                     View.Main main = new View.Main();
                     main.Show();
